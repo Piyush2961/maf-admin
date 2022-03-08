@@ -1,0 +1,15 @@
+.image {
+    width: 40%;
+    height: 40%;
+}
+
+.uppernothing {
+    margin: 1rem auto;
+}
+
+@media (max-width: 1260px) {
+    .image {
+        width: 70%;
+        height: 70%;
+    }
+}

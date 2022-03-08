@@ -1,0 +1,44 @@
+.main {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+  .search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem;
+    border-radius: 5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  
+  .search input[type="text"] {
+    width: 90%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+  }
+  
+  .search .searchicon {
+    width: 10%;
+    min-width: 3rem;
+    cursor: pointer;
+    background-color: rgb(131, 124, 124);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+    font-size: 1.3rem;
+  }
+  
+  .searchicon:active {
+    font-size: 1.8rem;
+  }
+  

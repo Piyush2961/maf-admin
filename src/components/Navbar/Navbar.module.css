@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Fredoka&family=Itim&family=Lilita+One&family=Pacifico&family=Satisfy&display=swap");
+
+.heading {
+  background: rgba(199, 203, 230, 255);
+  border-radius: 2rem;
+  backdrop-filter: blur(20px);
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.firstnav {
+  margin-left: 0.5rem;
+}
+
+.profileicon {
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+@media (max-width: 500px) {
+  .profileicon {
+    display: none;
+  }
+  .nav {
+    justify-content: center;
+    align-items: center;
+  }
+}
