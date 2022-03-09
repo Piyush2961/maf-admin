@@ -11,7 +11,7 @@ const AllCards = () => {
     
     const onClickCategory = (val) =>{
           const data = productList.filter((el)=>{
-            return (el.category).toLowerCase() === (val).toLowerCase();
+            return (el.category).toLowerCase().includes(val.toLowerCase())
           })
 
           console.log(data);
