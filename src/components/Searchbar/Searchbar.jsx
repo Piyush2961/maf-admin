@@ -1,7 +1,7 @@
 import React , {useState} from "react";
 import styles from "./Searchbar.module.css";
-import { BiSearchAlt } from "react-icons/all";
-import { IoCloseSharp } from "react-icons/all";
+import { BiSearchAlt } from "react-icons/bi";
+import { IoCloseSharp } from "react-icons/io5";
 
 const Searchbar = ({click , reset}) => {
   const [val,setVal]=useState("");

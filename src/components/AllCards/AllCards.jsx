@@ -3,8 +3,10 @@ import Card from "./../Card/Card";
 import styles from "./AllCards.module.css";
 import Search from './../Searchbar/Searchbar'
 import NothingFound from "../NothingFound/NothingFound";
-const AllCards = () => {
-  const [productList, updateList] = useState(0);
+const AllCards = ({setLoader}) => {
+
+
+  const [productList, updateList] = useState("");
 
   const [useSearch, resetSearch] = useState(0);
     const [category, setCategory] = useState(0);
@@ -23,6 +25,8 @@ const AllCards = () => {
     }
 
   useEffect(() => {
+
+    setLoader(true);
     const axios = require("axios");
 
     const config = {
@@ -35,9 +39,11 @@ const AllCards = () => {
       .then(function (response) {
         console.log(response.data);
         updateList(response.data);
+        setLoader(false);
       })
       .catch(function (error) {
         console.log(error);
+        setLoader(false);
       });
   }, []);
   return (
