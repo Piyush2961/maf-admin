@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "./Card.module.css";
-import { FaRupeeSign } from "react-icons/fa";
-import { ImBin } from "react-icons/im";
-import { BsPencilFill } from "react-icons/bs";
-import Bin from './../Images/bin.svg'
+import { FaRupeeSign } from "react-icons/all";
+import { ImBin } from "react-icons/all";
+import { BsPencilFill } from "react-icons/all";
 const Card = ({ name, image, rating, price, count }) => {
   return (
     <div className={styles.maincard}>

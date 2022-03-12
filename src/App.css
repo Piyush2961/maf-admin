@@ -4,4 +4,6 @@
 }
 html {
   background: rgba(233, 236, 251, 255);
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
 }
