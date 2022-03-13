@@ -4,9 +4,10 @@ import users from "./../Images/users.svg"
 import home from "./../Images/home.svg"
 import logout from "./../Images/logout.svg"
 import styles from "./Navbar.module.css";
-const Navbar = () => {
+const Navbar = ({setSwaphomeAndUsers}) => {
   return (
     <div className={styles.heading}>
+       &nbsp;
       <div className={styles.nav}>
         <div className={styles.firstnav}>
           <h1>
@@ -21,12 +22,12 @@ const Navbar = () => {
         </div>
 
         <div className={styles.center}>
-          <div className={styles.upHome}>
+          <div className={styles.upHome} onClick={()=>setSwaphomeAndUsers(false)}>
              <img src={home} className={styles.home} />
              <p>HOME</p>
           </div>
 
-          <div className={styles.upUsers}>
+          <div className={styles.upUsers} onClick={()=>setSwaphomeAndUsers(true)}>
              <img src={users} className={styles.users} />
              <p>USERS</p>
           </div>

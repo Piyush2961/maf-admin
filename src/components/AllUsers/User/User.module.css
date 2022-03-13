@@ -54,3 +54,32 @@
     font-weight: 500;
     font-size: 1.1rem;
 }
+
+@media (max-width: 850px) {
+    .image {
+        display: none;
+    }
+
+    .name p {
+        font-size: .9rem;
+    }
+    
+    .email p {
+        font-size: .8rem;
+    }
+    
+    .edit{
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: .5rem;
+    }
+
+    .delete{
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: .5rem;
+    }
+    .main {
+        width: 90%;
+    }
+}

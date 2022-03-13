@@ -3,9 +3,12 @@ import styles from './User.module.css'
 import user from './../../Images/user.svg'
 import edit from './../../Images/edit.svg'
 import del from './../../Images/delete.svg'
+import EditUser from '../EditUser/EditUser'
 
-const User = () => {
+const User = ({name , email , id , deleteUser , editUser , setEdit}) => {
+  
   return (
+    
     <div className={styles.main}>
         
         <div className={styles.image}>
@@ -13,20 +16,20 @@ const User = () => {
         </div>
 
         <div className={styles.name}>
-              <p>Piyush Kumar</p>
+              <p>{name}</p>
         </div>
 
         <div className={styles.email}>
-              <p>piyushkumar2961@gmail.com</p>
+              <p>{email}</p>
         </div>
         
         <div className={styles.editandDel}>
  
-            <div className={styles.edit}>
+            <div className={styles.edit} onClick={()=>setEdit(name , email , id)}>
             <img src={edit} alt="" style={{ width: "100%" , height: "100%"}} />
             </div>
 
-            <div className={styles.delete}>
+            <div className={styles.delete} onClick={()=>deleteUser(id)}>
             <img src={del} alt="" style={{ width: "100%" , height: "100%"}} />
             </div> 
  
@@ -35,6 +38,7 @@ const User = () => {
        
 
     </div>
+
   )
 }
 
