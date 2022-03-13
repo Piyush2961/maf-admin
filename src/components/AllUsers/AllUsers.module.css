@@ -1,0 +1,9 @@
+.main {
+    background: #9eceda;
+    height: 75vh;
+    width: 98%;
+    margin: auto;
+    border-radius: 1.5rem;
+    overflow: auto;
+    backdrop-filter: blur(10px);
+}
