@@ -2,7 +2,6 @@ import React , {useState} from 'react'
 import styles from './AddItem.module.css'
 import close from './../Images/close.svg'
 import ItemLoader from '../ItemLoader/ItemLoader'
-import tick from './../Images/tick.svg'
 
 const AddItem = ({setShowAddItem, setLoader}) => {
 
@@ -14,7 +13,7 @@ const AddItem = ({setShowAddItem, setLoader}) => {
      const [photo, setPhoto] = useState(null)
      const [name, setName] = useState('')
      const [price, setPrice] = useState('')
-     const [count, setCount] = useState('')
+     const [brand, setBrand] = useState('')
      const [type, setType] = useState('')
      const [tag, setTag] = useState('')
      const [img, setImg] = useState('')
@@ -66,7 +65,7 @@ const AddItem = ({setShowAddItem, setLoader}) => {
             name,
             rating,
             price,
-            count,
+            brand,
             type,
             tag,
             img
@@ -119,8 +118,8 @@ const AddItem = ({setShowAddItem, setLoader}) => {
             </div>
 
             <div className={styles.count}>
-               <h3>Count : </h3>
-               <input type="text" onChange={(e)=>setCount(e.target.value)}/>
+               <h3>brand : </h3>
+               <input type="text" onChange={(e)=>setBrand(e.target.value)}/>
             </div>
 
             <div className={styles.tag}>
@@ -163,10 +162,7 @@ const AddItem = ({setShowAddItem, setLoader}) => {
 
       </div>
          
-        {/* <input type="file" name="" id="photo" onChange={(e)=>setPhoto(e.target.files[0])}/>
-        <button type="submit" onClick={addImage}>
-            add
-        </button> */}
+
     </div>
   )
 }

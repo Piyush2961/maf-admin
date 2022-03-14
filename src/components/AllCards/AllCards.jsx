@@ -13,7 +13,7 @@ const AllCards = ({setLoader}) => {
     
     const onClickCategory = (val) =>{
           const data = productList.filter((el)=>{
-            return (el.category).toLowerCase().includes(val.toLowerCase())
+            return (el.name).toLowerCase().includes(val.toLowerCase()) || (el.brand).toLowerCase().includes(val.toLowerCase())
           })
 
           console.log(data);
@@ -31,14 +31,14 @@ const AllCards = ({setLoader}) => {
 
     const config = {
       method: "get",
-      url: "https://fakestoreapi.com/products",
+      url: "https://maf-admin-api.herokuapp.com/api/items",
       headers: {}
     };
 
     axios(config)
       .then(function (response) {
-        console.log(response.data);
-        updateList(response.data);
+        console.log(response.data.data.items);
+        updateList(response.data.data.items);
         setLoader(false);
       })
       .catch(function (error) {
@@ -55,11 +55,13 @@ const AllCards = ({setLoader}) => {
    {category &&
      category.map((el) => (
        <Card
-         name={el.title}
-         image={el.image}
-         rating={el.rating.rate}
+         name={el.name}
+         image={el.img}
+         rating={el.rating}
          price={el.price}
-         count={el.rating.count}
+         brand={el.brand}
+         tag={el.tag}
+         id={el._id}
        />
      ))}
 
@@ -69,11 +71,13 @@ const AllCards = ({setLoader}) => {
       {productList &&
         productList.map((el) => (
           <Card
-            name={el.title}
-            image={el.image}
-            rating={el.rating.rate}
-            price={el.price}
-            count={el.rating.count}
+          name={el.name}
+          image={el.img}
+          rating={el.rating}
+          price={el.price}
+          brand={el.brand}
+          tag={el.tag}
+          id={el._id}
           />
         ))}
 

@@ -3,7 +3,7 @@ import styles from "./Card.module.css";
 import { FaRupeeSign } from "react-icons/all";
 import { ImBin } from "react-icons/all";
 import { BsPencilFill } from "react-icons/all";
-const Card = ({ name, image, rating, price, count }) => {
+const Card = ({ name, image, rating, price, brand , tag}) => {
   return (
     <div className={styles.maincard}>
       <div className={styles.innercard}>
@@ -16,7 +16,7 @@ const Card = ({ name, image, rating, price, count }) => {
         </div>
        
        <div className={styles.tag}>
-            <p style={{ color: "white" , fontSize: ".7rem", fontWeight: "600"}}>Trending</p>
+            <p style={{ color: "white" , fontSize: ".7rem", fontWeight: "600"}}>{tag}</p>
        </div>
 
         <div className={styles.image}>
@@ -36,7 +36,7 @@ const Card = ({ name, image, rating, price, count }) => {
           </div>
 
           <div className={styles.productcount}>
-            <span style={{ fontWeight: "600" }}>{count}</span>{" "}
+            
             <span
               style={{
                 background: "red",
@@ -45,7 +45,7 @@ const Card = ({ name, image, rating, price, count }) => {
                 borderRadius: ".5rem"
               }}
             >
-              LEFT
+              {brand}
             </span>
           </div>
         </div>
