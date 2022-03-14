@@ -11,12 +11,13 @@ export default function App() {
    
   const [showLoader, setLoader] = useState(false);
   const [swaphomeAndUsers, setSwaphomeAndUsers] = useState(false);
+  const [showAddItem, setShowAddItem] = useState(false);
 
   return (
     <div className="App">
-      {/* <AddItem /> */}
+      {showAddItem ? <AddItem setShowAddItem={setShowAddItem} setLoader={setLoader}/> : null }
       {showLoader? <Loader />: ""}
-      <Navbar setSwaphomeAndUsers={setSwaphomeAndUsers}/>
+      <Navbar setSwaphomeAndUsers={setSwaphomeAndUsers} setShowAddItem={setShowAddItem}/>
       {swaphomeAndUsers? <AllUsers />: <AllCards setLoader={setLoader}/>}
     </div>
   );

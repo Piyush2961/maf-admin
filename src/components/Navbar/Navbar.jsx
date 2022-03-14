@@ -4,7 +4,7 @@ import users from "./../Images/users.svg"
 import home from "./../Images/home.svg"
 import logout from "./../Images/logout.svg"
 import styles from "./Navbar.module.css";
-const Navbar = ({setSwaphomeAndUsers}) => {
+const Navbar = ({setSwaphomeAndUsers , setShowAddItem}) => {
   return (
     <div className={styles.heading}>
        &nbsp;
@@ -32,7 +32,7 @@ const Navbar = ({setSwaphomeAndUsers}) => {
              <p>USERS</p>
           </div>
 
-          <div className={styles.upAdd}>
+          <div className={styles.upAdd} onClick={()=>setShowAddItem(true)}>
              <img src={create} className={styles.add} />
              <p>ADD ITEM</p>
           </div>
