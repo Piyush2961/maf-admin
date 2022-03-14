@@ -20,7 +20,7 @@ const Card = ({ name, image, rating, price, brand , tag , id , type , openEdit, 
        </div>
 
         <div className={styles.image}>
-          {/* <img src={image} alt="" width="100%" height="100%" style={{ objectFit: "contain" }}/> */}
+          <img src={image} alt="" width="100%" height="100%" style={{ objectFit: "contain" }}/>
         </div>
 
         <div className={styles.productName}>
