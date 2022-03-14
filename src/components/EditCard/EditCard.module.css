@@ -7,6 +7,7 @@
     align-items: center;
     z-index: 1;
     backdrop-filter: blur(20px);
+    transform: translateY(-21.1%);
 }
 
 .addinner {
@@ -14,9 +15,9 @@
     width: 35rem;
     height: fit-content;
     border-radius: 2rem;
-    position: absolute;
     backdrop-filter: blur(20px);
     color: rgb(255, 255, 255);
+    
  }
  .close {
     position: absolute;
@@ -56,6 +57,11 @@
     padding-right: 2rem;
     border: 0px solid transparent;
     margin-bottom: 1rem;
+}
+@media (max-width: 960px) {
+    .addupper {
+        transform: translateY(-29.3%);
+    }
 }
 
 @media (max-width: 600px) {

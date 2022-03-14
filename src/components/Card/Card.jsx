@@ -3,13 +3,13 @@ import styles from "./Card.module.css";
 import { FaRupeeSign } from "react-icons/all";
 import { ImBin } from "react-icons/all";
 import { BsPencilFill } from "react-icons/all";
-const Card = ({ name, image, rating, price, brand , tag}) => {
+const Card = ({ name, image, rating, price, brand , tag , id , type , openEdit, deletItem}) => {
   return (
     <div className={styles.maincard}>
       <div className={styles.innercard}>
         <div className={styles.innerheader}>
-         <BsPencilFill className={styles.edit}/>
-         <ImBin className={styles.delete}/>
+         <BsPencilFill className={styles.edit} onClick={()=>openEdit(name, price, brand, type, tag, rating, id) }/>
+         <ImBin className={styles.delete} onClick={()=>deletItem(id)}/>
         </div>
         <div className={styles.rating}>
           <p>{rating}</p>
@@ -20,7 +20,7 @@ const Card = ({ name, image, rating, price, brand , tag}) => {
        </div>
 
         <div className={styles.image}>
-          <img src={image} alt="" width="100%" height="100%" />
+          {/* <img src={image} alt="" width="100%" height="100%" style={{ objectFit: "contain" }}/> */}
         </div>
 
         <div className={styles.productName}>
